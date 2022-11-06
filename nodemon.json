@@ -1,0 +1,13 @@
+{
+  "ignore": ["node_modules", "dist"],
+  "exec": "npm run dev",
+  "watch": [
+    "public/**",
+    "!public/version.txt",
+    "!public/iconfont/**",
+    "*.config.js",
+    ".eslint**.*",
+    "package.json",
+    "index.html"
+  ]
+}

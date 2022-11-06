@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 如果使用了npm install，可能会有package-lock.json文件，需要删除后重新下载。保证仓库以及本地包依赖正常
+if [ -f package-lock.json ]; then
+  pnpm run rm
+  pnpm install
+  git add package-lock.json
+  git add pnpm-lock.yaml
+fi
+pnpm run type-check
+npx lint-staged

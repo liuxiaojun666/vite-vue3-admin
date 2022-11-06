@@ -1,0 +1,6 @@
+{
+  "*.{js,ts,vue}": [
+    "npm run rm-debug",
+    "npx eslint"
+  ]
+}

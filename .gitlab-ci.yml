@@ -1,0 +1,131 @@
+stages:
+  - build
+
+# 打包并上传镜像
+build_image:
+  stage: build
+  script:
+    - chmod +x ./deploy/build-image.sh
+    - ./deploy/build-image.sh
+  retry: 2
+  when: manual
+  tags:
+    - ai_fe_group_runner
+
+# 打包并上传镜像
+build_push_prod:
+  stage: build
+  script:
+    - chmod +x ./deploy/build-push-img.prod.sh
+    - ./deploy/build-push-img.prod.sh
+  retry: 2
+  when: manual
+  except:
+    - master
+  tags:
+    - ai_fe_group_runner
+
+# master自动打包并上传镜像
+master_auto_build_push_prod:
+  stage: build
+  script:
+    - chmod +x ./deploy/build-push-img.prod.sh
+    - ./deploy/build-push-img.prod.sh
+  retry: 2
+  only:
+    - master
+  tags:
+    - ai_fe_group_runner
+
+# 部署
+deploy_179:
+  stage: build
+  variables:
+    ENV: 179
+  script:
+    - chmod +x ./deploy/deploy-test.sh
+    - ./deploy/deploy-test.sh $ENV
+  when: manual
+  retry: 2
+  except:
+    - master
+  tags:
+    - ai_fe_group_runner
+
+# 部署
+deploy_188_or_208:
+  stage: build
+  variables:
+    ENV: 188
+  script:
+    - chmod +x ./deploy/deploy-test.sh
+    - ./deploy/deploy-test.sh $ENV
+  when: manual
+  retry: 2
+  except:
+    - master
+  tags:
+    - ai_fe_group_runner
+
+# 部署
+deploy_189_or_209:
+  stage: build
+  variables:
+    ENV: 189
+  script:
+    - chmod +x ./deploy/deploy-test.sh
+    - ./deploy/deploy-test.sh $ENV
+  when: manual
+  retry: 2
+  except:
+    - master
+  tags:
+    - ai_fe_group_runner
+
+# 部署
+deploy_206:
+  stage: build
+  variables:
+    ENV: 206
+  script:
+    - chmod +x ./deploy/deploy-test.sh
+    - ./deploy/deploy-test.sh $ENV
+  # when: manual
+  # except:
+  #   - master
+  only:
+    - dev
+  retry: 2
+  tags:
+    - ai_fe_group_runner
+
+# 部署
+deploy_207:
+  stage: build
+  variables:
+    ENV: 207
+  script:
+    - chmod +x ./deploy/deploy-test.sh
+    - ./deploy/deploy-test.sh $ENV
+  when: manual
+  retry: 2
+  except:
+    - master
+  tags:
+    - ai_fe_group_runner
+
+
+# 使用token部署
+trigger:
+  stage: build
+  script:
+    - if [ ! -n "$ENV" ]; then echo "IS NULL";
+    - else
+    -   echo 'trigger'
+    -   chmod +x ./deploy/deploy-test.sh
+    -   ./deploy/deploy-test.sh $ENV
+    -   echo ${ENV}
+    - fi
+  retry: 2
+  tags:
+    - ai_fe_group_runner

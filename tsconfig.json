@@ -1,0 +1,45 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["components.d.ts", "env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/assets/iconfont/**/*.js"],
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
+    "baseUrl": ".",
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "types": [
+      "vite/client",
+      "element-plus/global"
+    ],
+    "paths": {
+      "@/*": ["./src/*", "components.d.ts", "env.d.ts"]
+    }
+  },
+
+  "ts-node": {
+    "extends": "@vue/tsconfig/tsconfig.node.json",
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "Node",
+      "target": "ESNext",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "types": ["node"]
+    }
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}

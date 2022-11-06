@@ -1,0 +1,8 @@
+// 这里放 element-plus 的自定义主题颜色，只能放变量
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #509BFD,
+    ),
+  ),
+);
