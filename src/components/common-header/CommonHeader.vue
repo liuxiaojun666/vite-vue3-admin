@@ -25,7 +25,7 @@ const breadcrumb = computed(() =>
       <el-breadcrumb-item
         v-for="item in breadcrumb"
         :key="item.name"
-        :to="{ path: '/' }">
+        :to="item.to">
         {{ item.name }}
       </el-breadcrumb-item>
     </el-breadcrumb>

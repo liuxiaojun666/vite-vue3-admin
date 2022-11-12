@@ -11,7 +11,7 @@ interface Options {
   onConfirm: (done: () => void) => void
   onCancel?: () => void
 }
-export default function deleteConfirm(options: Options) {
+export default function confirm(options: Options) {
   const onCancel = () => {
     options.onCancel?.()
     ElMessageBox.close()

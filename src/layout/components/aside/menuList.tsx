@@ -29,8 +29,8 @@ const menuList: MenuListProps[] = [
     disabled: true,
   },
   {
-    title: '档案',
-    path: '/ElevatorArchives',
+    title: '楼栋信息',
+    path: '/BuildingInfo',
     icon: IconMenuElevator,
   },
   {
