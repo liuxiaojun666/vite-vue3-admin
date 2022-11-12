@@ -7,6 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CommonButton: typeof import('./src/components/common-button/CommonButton.vue')['default']
+    CommonCard: typeof import('./src/components/common-card/CommonCard.vue')['default']
+    CommonHeader: typeof import('./src/components/common-header/CommonHeader.vue')['default']
+    CommonPlaceholder: typeof import('./src/components/common-placeholder/CommonPlaceholder.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElBadge: typeof import('element-plus/es')['ElBadge']
     ElButton: typeof import('element-plus/es')['ElButton']
