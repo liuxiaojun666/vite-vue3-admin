@@ -1,42 +1,58 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { communityList as getCommunityListApi } from '@/api/community/community'
 
-interface Community {
-  community_id: string
-  community_name: string
-}
 export const useCommunityStore = defineStore('community_store', () => {
-  const communityList = ref<Community[]>([])
-  const communityId = ref<string>('')
-  const communityName = ref<string>('')
+  const communityTree = ref<API.CommunityListItem[]>()
+  const communityList = ref<API.CommunityListItem[]>([])
+  const communityMapById = ref<{ [key: string]: API.CommunityListItem }>({})
+  const currentCommunity = ref<API.CommunityListItem | null>(null)
 
-  const setCommunityList = (list?: Community[]) => {
-    communityList.value = list || []
-    if (communityId.value) return
-    communityName.value = communityList.value[0]?.community_name
-    communityId.value = communityList.value[0]?.community_id
+  const getCommunityTree = async () => {
+    const [err, res] = await getCommunityListApi()
+    if (err) return
+    communityTree.value = res.data?.list && [res.data?.list]
+    initCommunityData()
   }
 
-  const setCommunityId = (id: string) => {
-    communityId.value = id
-    const communityInfo = communityList.value.find(
-      (item) => item.community_id === id
-    )
-    communityName.value = communityInfo?.community_name || ''
+  const initCommunityData = () => {
+    communityList.value = []
+    communityMapById.value = {}
+    const treeList = communityTree.value
+    const loop = (list?: API.CommunityListItem[]) => {
+      list?.forEach((item) => {
+        if (item.list) return loop(item.list)
+        communityList.value.push(item)
+        communityMapById.value[item.id] = item
+      })
+    }
+    loop(treeList)
+    if (currentCommunity.value) {
+      currentCommunity.value = communityMapById.value[currentCommunity.value.id]
+    }
+    if (!currentCommunity.value && communityList.value.length) {
+      currentCommunity.value = communityList.value[0]
+    }
+  }
+
+  const switchCommunity = (id: string) => {
+    currentCommunity.value = communityMapById.value[id]
   }
 
   const $reset = () => {
+    communityTree.value = []
     communityList.value = []
-    communityId.value = ''
-    communityName.value = ''
+    communityMapById.value = {}
+    currentCommunity.value = null
   }
 
   return {
+    communityTree,
     communityList,
-    communityId,
-    communityName,
-    setCommunityList,
-    setCommunityId,
+    communityMapById,
+    currentCommunity,
+    getCommunityTree,
+    switchCommunity,
     $reset,
   }
 })

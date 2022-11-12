@@ -3,7 +3,7 @@ const route: RouteRecordRaw = {
   path: '/:pathMatch(.*)*',
   name: 'page404',
   component: () => import('./NotPage.vue'),
-  meta: { code: '', title: '页面不存在' },
+  meta: { code: '', title: '页面不存在', layout: 'empty' },
 }
 
 // 是否是异步路由

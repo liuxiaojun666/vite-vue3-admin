@@ -3,7 +3,7 @@ const route: RouteRecordRaw = {
   path: '/login',
   name: 'Login',
   component: () => import('./LoginView.vue'),
-  meta: { code: '', title: '登录' },
+  meta: { code: '', title: '登录', layout: 'empty' },
 }
 
 // 是否是异步路由

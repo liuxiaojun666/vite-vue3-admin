@@ -5,5 +5,7 @@ declare module 'vue-router' {
     keepAlive?: boolean
     title: string
     code: string
+    layout: 'default' | 'empty' | 'top'
+    lazy?: boolean
   }
 }

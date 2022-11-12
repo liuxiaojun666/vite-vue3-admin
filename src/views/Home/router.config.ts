@@ -3,7 +3,7 @@ const route: RouteRecordRaw = {
   path: '/home',
   name: 'Home',
   component: () => import('./HomeView.vue'),
-  meta: { title: '首页', code: 'home' },
+  meta: { title: '首页', code: 'home', layout: 'default' },
 }
 
 // 是否是异步路由
