@@ -48,10 +48,13 @@ export default defineConfig(() => ({
       apply: 'serve',
     },
     AutoImport({
+      imports: ['vue', 'vue-router', '@vueuse/core'],
       resolvers: [ElementPlusResolver()],
+      dts: true,
     }),
     Components({
       resolvers: [ElementPlusResolver()],
+      dts: true,
     }),
     ElementPlus({
       useSource: true,
