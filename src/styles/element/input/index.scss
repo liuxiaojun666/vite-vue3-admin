@@ -1,0 +1,14 @@
+.theme-default {
+  .el-input {
+    --el-input-placeholder-color: #CDCDCD;
+    .el-input__inner {
+      --el-input-inner-height: 26px;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #CDCDCD;
+  }
+}

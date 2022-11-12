@@ -1,0 +1,81 @@
+
+/* flex */
+.ai-c {
+  align-items: center;
+}
+.c-p {
+  cursor: pointer;
+}
+.ai-fs {
+  align-items: flex-start;
+}
+.flex {
+  display: flex;
+}
+.fw-w {
+  flex-wrap: wrap;
+}
+.fd-c {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+.jc-c {
+  justify-content: center;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.va-m {
+  vertical-align: middle;
+}
+
+
+
+/* 水平垂直居中 */
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$sizes: 4, 8, 16, 24, 32, 30, 50;
+@each $size in $sizes {
+  .m-#{$size} {
+    margin: #{$size}px
+  }
+  .mt-#{$size} {
+    margin-top: #{$size}px
+  }
+  .mb-#{$size} {
+    margin-bottom: #{$size}px
+  }
+  .ml-#{$size} {
+    margin-left: #{$size}px
+  }
+  .mr-#{$size} {
+    margin-right: #{$size}px
+  }
+}
+@each $size in $sizes {
+  .p-#{$size} {
+    padding: #{$size}px
+  }
+  .pt-#{$size} {
+    padding-top: #{$size}px
+  }
+  .pb-#{$size} {
+    padding-bottom: #{$size}px
+  }
+  .pl-#{$size} {
+    padding-left: #{$size}px
+  }
+  .pr-#{$size} {
+    padding-right: #{$size}px
+  }
+}

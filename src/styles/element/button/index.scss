@@ -1,0 +1,16 @@
+.theme-default {
+  .el-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    --el-border-radius-base: 4px;
+    --el-button-font-weight: 500;
+    --el-font-size-base: 16px;
+    // --el-button-bg-color: #fff;
+    // --el-button-hover-bg-color: #fff;
+    // --el-button-active-text-color:
+    & [class*=el-icon]+span {
+      margin-left: 8px;
+    }
+  }
+  
+}

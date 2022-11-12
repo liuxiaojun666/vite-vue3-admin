@@ -1,0 +1,41 @@
+.theme-default {
+  .el-popper {
+    padding: 0;
+    /** tooltip **/
+    &.tooltip {
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #1D2129;
+      line-height: 20px;
+      padding: 8px 16px;
+      
+    }
+    /** dropdown **/
+    &.el-dropdown__popper {
+      --el-dropdown-menu-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.15);
+      border: none;
+      .el-dropdown-menu {
+        padding: 0;
+        .el-dropdown-menu__item {
+          padding: 0;
+          .common-dropdown-item {
+            width: 104px;
+            height: 46px;
+            font-size: 14px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #1d2129;
+            background: #ffffff;
+            line-height: 46px;
+            text-align: center;
+            &:hover {
+              background: rgba(80, 155, 253, 0.1);
+              color: #509bfd;
+            }
+          }
+        }
+      }
+    }
+  }
+}

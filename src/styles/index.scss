@@ -1,2 +1,11 @@
 @import '@/assets/base.scss';
-:root {}
+@import './common/index.scss';
+@import './element/button/index.scss';
+@import './element/popper/index.scss';
+@import './element/badge/index.scss';
+@import './element/input/index.scss';
+@import './element/message-box/index.scss';
+:root {
+  // --el-border-radius-base: 3px;
+  --el-button-border-color: #509BFD;
+}

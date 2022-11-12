@@ -1,0 +1,17 @@
+.theme-default {
+  .el-message-box {
+    padding-bottom: 0;
+
+    &__header {
+      padding-left: 32px;
+      padding-top: 32px;
+      padding-bottom: 0;
+    }
+
+    &__content {
+      padding-top: 0;
+      padding-left: 32px;
+      padding-top: 16px;
+    }
+  }
+}

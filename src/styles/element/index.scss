@@ -4,5 +4,44 @@
     'primary': (
       'base': #509BFD,
     ),
+    'danger': (
+      'base': #FF3D3D,
+    ),
+    'warning': (
+      'base': #FFD050,
+    ),
+    'error': (
+      'base': #f56c6c,
+    ),
+    'info': (
+      'base': #909399,
+    ),
+    'success': (
+      'base': #67c23a,
+    ),
   ),
-);
+  $text-color: (
+    'primary': #1d2129,
+  ),
+  $badge: (
+    'radius': 50%,
+    'font-size': 12px,
+    'padding': 6px,
+    'size': 20px,
+  ),
+  $button-padding-horizontal: (
+    'large': 20px,
+    'default': 30px,
+    'small': 12px,
+  ),
+  $messagebox: (
+    'title-color': getCssVar('text-color-primary'),
+    'width': 432px,
+    'border-radius': 4px,
+    'font-size': 16px,
+    'content-font-size': 14px,
+    'content-color': #666666,
+    'error-font-size': 12px,
+    'padding-primary': 16px,
+  ),
+)
