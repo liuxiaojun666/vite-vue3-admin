@@ -5,8 +5,8 @@
  * local.config.ts 为本地开发配置文件，不应该提交到代码仓库。
  */
 
-const localConfig = require('../local.config')
-const proxyLocations = require('./proxy.targets')
+import localConfig from '../local.config'
+import proxyLocations from './proxy.targets'
 
 export interface customConfigOptions {
   // 是否打开浏览器
