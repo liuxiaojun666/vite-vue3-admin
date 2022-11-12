@@ -2,6 +2,76 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { communityList as getCommunityListApi } from '@/api/community/community'
 
+const mockTreeData: API.CommunityListItem[] = [
+  {
+    id: 'china',
+    name: '全国',
+    is_inner: false,
+    level: 1,
+    type: 'company',
+    list: [
+      {
+        id: 'beijing',
+        name: '北京市',
+        is_inner: false,
+        level: 2,
+        type: 'company',
+        list: [
+          {
+            id: 'changcheng',
+            name: '八达岭长城',
+            is_inner: true,
+            level: 3,
+            type: 'community',
+            list: null,
+          },
+          {
+            id: 'wangjing',
+            name: '望京公园',
+            is_inner: false,
+            level: 3,
+            type: 'community',
+            list: null,
+          },
+          {
+            id: 'blue_gangwan',
+            name: '蓝色港湾',
+            is_inner: false,
+            level: 3,
+            type: 'community',
+            list: null,
+          },
+          {
+            id: 'xiangshan',
+            name: '香山',
+            is_inner: false,
+            level: 3,
+            type: 'community',
+            list: null,
+          },
+        ],
+      },
+      {
+        id: 'tianjin',
+        name: '天津市',
+        is_inner: false,
+        level: 2,
+        type: 'company',
+        list: [
+          {
+            id: 'yishifengqiang',
+            name: '一十丰庆',
+            is_inner: false,
+            level: 3,
+            type: 'community',
+            list: null,
+          },
+        ],
+      },
+    ],
+  },
+]
+
 export const useCommunityStore = defineStore('community_store', () => {
   const communityTree = ref<API.CommunityListItem[]>()
   const communityList = ref<API.CommunityListItem[]>([])
@@ -10,7 +80,11 @@ export const useCommunityStore = defineStore('community_store', () => {
 
   const getCommunityTree = async () => {
     const [err, res] = await getCommunityListApi()
-    if (err) return
+    if (err) {
+      communityTree.value = mockTreeData
+      initCommunityData()
+      return
+    }
     communityTree.value = res.data?.list && [res.data?.list]
     initCommunityData()
   }

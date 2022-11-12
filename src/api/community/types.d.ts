@@ -3,7 +3,7 @@ declare namespace API {
     id: string
     is_inner: boolean
     level: number
-    list?: CommunityListItem[]
+    list?: CommunityListItem[] | null
     name: string
     type: string
   }
