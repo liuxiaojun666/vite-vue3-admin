@@ -1,9 +1,14 @@
 import type { RouteRecordName, RouteRecordRaw } from 'vue-router'
 const route: RouteRecordRaw = {
-  path: '/home',
+  path: '/Home',
+  alias: '/home',
   name: 'Home',
   component: () => import('./HomeView.vue'),
-  meta: { title: '首页', code: 'home', layout: 'default' },
+  meta: { title: '工作台', code: 'home', layout: 'default' },
+  beforeEnter: (to, from, next) => {
+    if (to.path === '/home') next({ path: '/Home' })
+    else next()
+  },
 }
 
 // 是否是异步路由
