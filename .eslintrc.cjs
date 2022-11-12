@@ -12,4 +12,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  rules: {
+    'no-console': 'off',
+    'no-debugger': 'off',
+  },
+  globals: {
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
+    defineExpose: 'readonly',
+    withDefaults: 'readonly',
+    API: 'readonly',
+  },
 }
