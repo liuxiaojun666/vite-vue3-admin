@@ -1,6 +1,12 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["components.d.ts", "env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "components.d.ts",
+    "auto-imports.d.ts", 
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
   "exclude": ["src/assets/iconfont/**/*.js"],
   "compilerOptions": {
     "lib": [
