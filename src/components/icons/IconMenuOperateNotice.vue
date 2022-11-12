@@ -6,12 +6,7 @@
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g
-      id="电梯品质-智能监控"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g transform="translate(-16.000000, -475.000000)" fill-rule="nonzero">
         <g transform="translate(0.000000, 464.000000)">
           <g transform="translate(16.000000, 11.000000)">
