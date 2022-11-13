@@ -20,6 +20,7 @@ import path from 'path'
 export default defineConfig(() => ({
   build: {
     cssTarget: 'chrome61',
+    base: './',
   },
   resolve: {
     alias: {
