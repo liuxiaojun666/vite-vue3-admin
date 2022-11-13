@@ -58,7 +58,7 @@ export default defineConfig(() => ({
     }),
     ElementPlus({
       useSource: true,
-      defaultLocale: 'zh-CN',
+      defaultLocale: 'zh-cn',
     }),
     legacy({
       targets: ['defaults', 'not IE 11'],
