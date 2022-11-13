@@ -1,1 +1,0 @@
-System.register(["./index-legacy.fe1213ed.js"],(function(e,n){"use strict";var t,r,u,s;return{setters:[e=>{t=e.aG,r=e.c,u=e.o,s=e.a}],execute:function(){const n={},c=[s("span",null,"home view",-1)];e("default",t(n,[["render",function(e,n){return u(),r("main",null,c)}]]))}}}));
