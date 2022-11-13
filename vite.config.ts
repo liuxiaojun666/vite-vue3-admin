@@ -18,9 +18,9 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
+  base: './',
   build: {
     cssTarget: 'chrome61',
-    base: './',
   },
   resolve: {
     alias: {
