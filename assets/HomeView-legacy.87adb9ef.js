@@ -1,0 +1,1 @@
+System.register(["./index-legacy.ad6656ad.js"],(function(e,n){"use strict";var t,r,u,a;return{setters:[e=>{t=e.aG,r=e.c,u=e.o,a=e.a}],execute:function(){const n={},s=[a("span",null,"home view",-1)];e("default",t(n,[["render",function(e,n){return u(),r("main",null,s)}]]))}}}));
