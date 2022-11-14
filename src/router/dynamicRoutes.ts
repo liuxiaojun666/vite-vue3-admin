@@ -13,7 +13,7 @@ const routeFiles = import.meta.glob<RouteFile>('../views/**/router.config.ts', {
   eager: true,
 })
 
-const routeMapByName = new Map()
+const routeMapByName = new Map<RouteRecordName, RouteRecordRaw>()
 // 子路由类型
 type subRoute = [RouteRecordName, RouteRecordRaw]
 // 子路由数组
@@ -31,6 +31,7 @@ for (const routePath in routeFiles) {
   } else {
     ;(isAsyncRoute ? asyncRoutes : constantRoutes).push(route)
   }
+  if (!route.name) throw new Error('路由配置文件必须指定路由的name属性')
   routeMapByName.set(route.name, route)
 }
 
