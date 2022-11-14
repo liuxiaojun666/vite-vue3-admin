@@ -1,9 +1,16 @@
 # vite-vue3-admin
 
+## 介绍
+
 - 一个使用Vite、vue3、ts 的项目模板，空项目，可用于快速搭建项目。
 - 没用很多页面模板、组件、工具函数。vue-use 是个好东西
 - 解决团队协作开发的问题，提供统一的开发环境、代码规范。在提交代码前，阻止不合规范的代码。
 - 保持代码干净，拒绝任何无用的代码
+
+## Preview
+
+[github pages](https://liuxiaojun.win/vite-vue3-admin/)
+[vercel](https://vite-vue3-admin-gamma.vercel.app/)
 
 ## 功能
 
