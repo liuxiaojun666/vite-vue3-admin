@@ -44,6 +44,7 @@ specifiers:
   unplugin-element-plus: ^0.4.1
   unplugin-vue-components: ^0.22.9
   vite: ^3.0.9
+  vite-plugin-404-redirect: ^0.0.1
   vite-plugin-checker: ^0.5.1
   vite-plugin-eslint: ^1.8.1
   vite-plugin-html-version: ^0.0.3
@@ -101,6 +102,7 @@ devDependencies:
   unplugin-element-plus: 0.4.1_vite@3.2.3
   unplugin-vue-components: 0.22.9_vue@3.2.45
   vite: 3.2.3_4xvisunkwbgjgrrieablaem7j4
+  vite-plugin-404-redirect: 0.0.1_4xvisunkwbgjgrrieablaem7j4
   vite-plugin-checker: 0.5.1_qjfwcqcaq6qfioqmvizcv2wgqy
   vite-plugin-eslint: 1.8.1_eslint@8.27.0+vite@3.2.3
   vite-plugin-html-version: 0.0.3_4xvisunkwbgjgrrieablaem7j4
@@ -5023,6 +5025,20 @@ packages:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
+    dev: true
+
+  /vite-plugin-404-redirect/0.0.1_4xvisunkwbgjgrrieablaem7j4:
+    resolution: {integrity: sha512-WKiaIw01W8s+x3280nbTv12i2olet52EHKzpOVCbufoSkjFNvq/MtifNoCGZ+fHM73SsFhB8DY7xMep67QgF8g==}
+    engines: {node: '>=16.18.0', pnpm: '>=6.0.0'}
+    dependencies:
+      vite: 3.2.3_4xvisunkwbgjgrrieablaem7j4
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - terser
     dev: true
 
   /vite-plugin-checker/0.5.1_qjfwcqcaq6qfioqmvizcv2wgqy:

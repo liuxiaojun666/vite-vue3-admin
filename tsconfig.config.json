@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.node.json",
-  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "scripts/**/*.ts", "config/**/*.ts", "local.config.ts", "vite-plugin-404-redirect.ts"],
+  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "scripts/**/*.ts", "config/**/*.ts", "local.config.ts"],
   "compilerOptions": {
     "importsNotUsedAsValues": "error",
     "composite": true,

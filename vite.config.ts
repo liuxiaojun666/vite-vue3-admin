@@ -14,7 +14,7 @@ import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import customConfig from './config/custom.config'
 import proxyOptions from './config/proxy.config'
-import redirect404page from './vite-plugin-404-redirect'
+import redirect404page from 'vite-plugin-404-redirect'
 import path from 'path'
 
 // https://vitejs.dev/config/

@@ -73,6 +73,7 @@
     "unplugin-element-plus": "^0.4.1",
     "unplugin-vue-components": "^0.22.9",
     "vite": "^3.0.9",
+    "vite-plugin-404-redirect": "^0.0.1",
     "vite-plugin-checker": "^0.5.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-html-version": "^0.0.3",
