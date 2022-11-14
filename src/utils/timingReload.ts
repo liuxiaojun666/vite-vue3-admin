@@ -42,16 +42,18 @@ async function diffVersion() {
 
 // 获取最新版本号
 function getVersion() {
-  return fetch(`/version.txt?_t=${Date.now}`).then((res) => {
-    if (res.ok) {
-      return res.body
-        ?.getReader()
-        .read()
-        .then(({ value }) => {
-          return new TextDecoder().decode(value)
-        })
-    } else {
-      throw new Error('获取版本号失败')
+  return fetch(import.meta.env.BASE_URL + `/version.txt?_t=${Date.now()}`).then(
+    (res) => {
+      if (res.ok) {
+        return res.body
+          ?.getReader()
+          .read()
+          .then(({ value }) => {
+            return new TextDecoder().decode(value)
+          })
+      } else {
+        throw new Error('获取版本号失败')
+      }
     }
-  })
+  )
 }
