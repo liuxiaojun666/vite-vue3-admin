@@ -37,7 +37,10 @@ async function diffVersion() {
   const newVersion = await getVersion()
   const oldVersion = document.documentElement?.dataset?.version?.trim()
   // 有新版本
-  if (newVersion !== oldVersion) return reload('检测到新版本，即将刷新页面')
+  if (newVersion !== oldVersion)
+    return reload(
+      '检测到新版本，即将刷新页面。多次刷新无效，请清除/禁用浏览器缓存'
+    )
 }
 
 // 获取最新版本号
