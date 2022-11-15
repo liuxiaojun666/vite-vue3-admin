@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import useUserStore from '@/stores/modules/user'
-import { useRouter } from 'vue-router'
 const userStore = useUserStore()
 const login = () => {
   userStore.setToken('123456')
-  useRouter().push('/')
+  location.reload()
 }
 </script>
 
