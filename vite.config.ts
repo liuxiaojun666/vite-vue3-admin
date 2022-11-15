@@ -15,7 +15,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import customConfig from './config/custom.config'
 import proxyOptions from './config/proxy.config'
 import redirect404page from 'vite-plugin-404-redirect'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -52,16 +51,6 @@ export default defineConfig(({ mode }) => {
       checker({ vueTsc: true }),
       htmlVersion(),
       redirect404page(),
-      viteStaticCopy({
-        targets: isGhPages
-          ? [
-              {
-                src: '.github/workflows',
-                dest: '.github/workflows',
-              },
-            ]
-          : [],
-      }),
       // 只在开发环境开启 eslint
       {
         ...eslintPlugin({
