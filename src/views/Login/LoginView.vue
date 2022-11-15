@@ -1,10 +1,19 @@
 <script setup lang="ts">
+import { onScopeDispose } from 'vue'
 import useUserStore from '@/stores/modules/user'
 const userStore = useUserStore()
+let timer: number
 const login = () => {
+  // 解决gitee pages登录后，页面不跳转的问题
+  timer = setTimeout(() => {
+    location.reload()
+  }, 1000)
   userStore.setToken('123456')
   location.reload()
 }
+onScopeDispose(() => {
+  clearTimeout(timer)
+})
 </script>
 
 <template>
