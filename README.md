@@ -9,8 +9,8 @@
 
 ## Preview
 
-[github pages](https://liuxiaojun.win/vite-vue3-admin/)
-[vercel](https://vite-vue3-admin-gamma.vercel.app/)
+- [github pages](https://liuxiaojun.win/vite-vue3-admin/)
+- [vercel](https://vite-vue3-admin-gamma.vercel.app/)
 
 ## 功能
 
