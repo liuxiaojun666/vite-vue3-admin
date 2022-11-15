@@ -11,6 +11,7 @@
 
 - [github pages](https://liuxiaojun.win/vite-vue3-admin/)
 - [vercel](https://vite-vue3-admin-gamma.vercel.app/)
+- [gitee pages](https://lxj_web.gitee.io/vite-vue3-admin/)
 
 ## 功能
 
