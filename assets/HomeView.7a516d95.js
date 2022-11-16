@@ -1,1 +1,0 @@
-import{_ as l,c as i,o,b as s,__tla as _}from"./index.95b523b6.js";let a,m=Promise.all([(()=>{try{return _}catch(e){}})()]).then(async()=>{const e={},t=s("span",null,"home view",-1),n=[t];function r(u,c){return o(),i("main",null,n)}a=l(e,[["render",r],["__file","/home/runner/work/vite-vue3-admin/vite-vue3-admin/src/views/Home/HomeView.vue"]])});export{m as __tla,a as default};
