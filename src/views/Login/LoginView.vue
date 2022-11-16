@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onScopeDispose } from 'vue'
 import useUserStore from '@/stores/modules/user'
 const userStore = useUserStore()
 const login = () => {
