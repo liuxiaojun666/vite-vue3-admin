@@ -28,4 +28,4 @@ coverage
 *.sw?
 
 local.config.ts
-public/version.txt
+public/version.json

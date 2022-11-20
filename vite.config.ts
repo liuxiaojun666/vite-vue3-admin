@@ -49,7 +49,14 @@ export default defineConfig(({ mode }) => {
       vue(),
       vueJsx(),
       checker({ vueTsc: true }),
-      htmlVersion(),
+      htmlVersion({
+        filename: 'version.json',
+        fileContent: (version) => {
+          return `{
+            "version": "${version}"
+          }`
+        },
+      }),
       redirect404page(),
       // 只在开发环境开启 eslint
       {

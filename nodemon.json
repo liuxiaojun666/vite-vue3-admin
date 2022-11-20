@@ -3,7 +3,7 @@
   "exec": "npm run dev",
   "watch": [
     "public/**",
-    "!public/version.txt",
+    "!public/version.json",
     "!public/iconfont/**",
     "*.config.js",
     ".eslint**.*",

@@ -47,7 +47,7 @@ specifiers:
   vite-plugin-404-redirect: ^0.0.1
   vite-plugin-checker: ^0.5.1
   vite-plugin-eslint: ^1.8.1
-  vite-plugin-html-version: ^0.0.3
+  vite-plugin-html-version: ^0.0.7
   vite-plugin-static-copy: ^0.12.0
   vite-plugin-top-level-await: ^1.2.1
   vue: ^3.2.38
@@ -106,7 +106,7 @@ devDependencies:
   vite-plugin-404-redirect: 0.0.1_4xvisunkwbgjgrrieablaem7j4
   vite-plugin-checker: 0.5.1_qjfwcqcaq6qfioqmvizcv2wgqy
   vite-plugin-eslint: 1.8.1_eslint@8.27.0+vite@3.2.3
-  vite-plugin-html-version: 0.0.3_4xvisunkwbgjgrrieablaem7j4
+  vite-plugin-html-version: 0.0.7_4xvisunkwbgjgrrieablaem7j4
   vite-plugin-static-copy: 0.12.0_vite@3.2.3
   vite-plugin-top-level-await: 1.2.1_vite@3.2.3
   vue-tsc: 1.0.9_typescript@4.7.4
@@ -5095,8 +5095,8 @@ packages:
       vite: 3.2.3_4xvisunkwbgjgrrieablaem7j4
     dev: true
 
-  /vite-plugin-html-version/0.0.3_4xvisunkwbgjgrrieablaem7j4:
-    resolution: {integrity: sha512-Qv2e/MLgFtBqUF6OfI4L2EZ2Cisiq10z0f61LHkzaU1EqzbYWOEIfhV0UyM/JERdq7khRSX5mvmivCqfHuCjWg==}
+  /vite-plugin-html-version/0.0.7_4xvisunkwbgjgrrieablaem7j4:
+    resolution: {integrity: sha512-zhB8aSvHjuidT7DL1fL+9f2+0C7IbWH0PcNB2R3d7jZLaXrZXMqnteK6aTo7BQGH3ApnkEKbbbzdMvOzkYUuNQ==}
     engines: {node: '>=16.18.0', pnpm: '>=6.0.0'}
     dependencies:
       vite: 3.2.3_4xvisunkwbgjgrrieablaem7j4
