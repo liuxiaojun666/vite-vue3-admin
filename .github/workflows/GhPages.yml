@@ -54,6 +54,7 @@ jobs:
   update:
     needs: sync
     runs-on: ubuntu-20.04
+    steps:
     - name: Update Gitee Pages
       uses: yanglbme/gitee-pages-action@main
       with:
