@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
@@ -33,6 +33,10 @@ jobs:
         publish_dir: ./dist
         full_commit_message: ${{ github.event.head_commit.message }}
 
+  sync:
+    needs: deploy
+    runs-on: ubuntu-20.04
+    steps:
     - name: Sync Github Repos To Gitee  # 名字随便起
       uses: Yikun/hub-mirror-action@v1.1  # 使用Yikun/hub-mirror-action
       with:
@@ -47,6 +51,9 @@ jobs:
         static_list: "vite-vue3-admin"  # 静态同步列表，在此填写需要同步的仓库名称，可填写多个
         timeout: '600s'  # git超时设置，超时后会自动重试git操作
 
+  update:
+    needs: sync
+    runs-on: ubuntu-20.04
     - name: Update Gitee Pages
       uses: yanglbme/gitee-pages-action@main
       with:
