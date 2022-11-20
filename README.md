@@ -11,7 +11,7 @@
 
 - [https://liuxiaojun.win/vite-vue3-admin/](https://liuxiaojun.win/vite-vue3-admin/)
 - [https://vite-vue3-admin-gamma.vercel.app/](https://vite-vue3-admin-gamma.vercel.app/)
-- [https://lxj_web.gitee.io/vite-vue3-admin/](https://lxj_web.gitee.io/vite-vue3-admin/) gitee pages 慢一个版本
+- [https://lxj_web.gitee.io/vite-vue3-admin/](https://lxj_web.gitee.io/vite-vue3-admin/)
 
 ## 功能
 
