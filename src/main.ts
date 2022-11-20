@@ -7,9 +7,7 @@ import timingReload from './utils/timingReload'
 import './assets/iconfont'
 import './styles/index.scss'
 
-if (!import.meta.env.DEV) {
-  timingReload()
-}
+timingReload()
 
 const app = createApp(App)
 app.use(store)
