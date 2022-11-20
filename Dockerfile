@@ -7,7 +7,7 @@ COPY ./scripts/ /app/scripts/
 COPY ./config/ /app/config/
 
 COPY package*.json /app/
-RUN npm ci --registry=http://registry.npm.taobao.org
+RUN pnpm i
 
 COPY . /app/
 RUN npm run build:${build_type}
