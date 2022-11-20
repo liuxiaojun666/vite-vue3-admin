@@ -1,0 +1,1 @@
+System.register(["./index-legacy.7d14fd6d.js"],(function(e,n){"use strict";var t,i,r,u;return{setters:[e=>{t=e._,i=e.c,r=e.o,u=e.b}],execute:function(){const n={},s=[u("span",null,"home view",-1)];e("default",t(n,[["render",function(e,n){return r(),i("main",null,s)}],["__file","/home/runner/work/vite-vue3-admin/vite-vue3-admin/src/views/Home/HomeView.vue"]]))}}}));
