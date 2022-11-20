@@ -83,6 +83,7 @@ export default defineConfig(({ mode }) => {
       cors: true,
       open: customConfig.open,
       proxy: proxyOptions,
+      force: true,
     },
     preview: {
       host: true,
